@@ -1,0 +1,36 @@
+Creator : Keanu Chetty
+
+Title : Create and delete users and groups
+
+Languages : N/A
+
+Software : Kali Linux
+
+
+// commands //
+
+///////////////////////////////////////////////// discussion: useradd vs adduser //////////////////////////////////////////////////////////
+   both of these commands are capable of creating a user 
+   useradd is a more primitive commands and requires the knowledge of other commands to create a password for the user 
+   the best approach is to use the || adduser || command, this will propt the administrator to create a password aswell as some information about the user 
+///////////////////////////////////////////////// discussion: useradd vs adduser //////////////////////////////////////////////////////////
+
+// user commands //
+"adduser"
+  creates a new user and adds all relevant information required 
+"deluser"
+  deletes an existing user and all their directories 
+"passwd"
+  changes the password of the user 
+      // variations //
+      "passwd -e 'username' "
+        this will expire the users password
+      "chage -d 0 'username' "
+        this will make the users password expire in a set amount of time 
+// group commands //
+"addgroup"
+  this creates a new group 
+"delgroup"
+  this deletes an existing group
+"usermod -a -G"
+   this will add a user to the group
