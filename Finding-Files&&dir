@@ -1,0 +1,31 @@
+Creator : Keanu Chetty
+Title : Finding Files and Directories
+Languages : N/A
+Software :Kali Linux
+
+//////////////////////////// Methods to find directories or files /////////////////////////////////
+  // Commands //
+  // find //
+  -> used to find files and directories 
+     // Variations //
+      -> -iname : searches using the files name and ignores the letter case
+      -> -mmin : searches the system looking for files modified x minutes ago 
+      -> -user : searches for files created by a specific user
+      -> -size : searches for a size of a specified size 
+          -> size suffixes 
+              -> c : bytes 
+              -> k : kilobytes 
+              -> M : megabytes 
+              -> G : gigabytes
+      -> -type : searches for a specific type of file 
+  // locate //
+  -> locates the file by taking advantage of an index or database
+      // Variations //
+      -> -i : doesn't consider letter case
+      -> -e : This validates that the file or directory actually exists 
+        // Need to Know //
+          -> updatedb : this will update the database 
+  // which //
+  -> finds a file with a specific attribute 
+  -> gives the absolute path of the linux command
+  
