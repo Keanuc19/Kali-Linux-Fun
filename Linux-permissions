@@ -1,0 +1,87 @@
+Creator : Keanu Chetty
+
+Title : File and Directory permissions
+
+Languages : N/A
+
+Software : Kali Linux
+
+//////////////////////// File Permissions //////////////////////
+
+the permissions are broken down into 
+  owner   group   others
+  rwx     rwx     rwx
+    
+ 4 r = read Permission
+  -> allows you to open and view files 
+  -> allows you to ls (list) the directories contents
+  -> allows you to copy and move a file if you have write and execute permissions
+  
+ 2 w = write Permission
+  -> allows you to edit the contents of the file 
+  -> allows you to copy and move files in the directory, this can only be done when paired with the execute permission
+  
+ 1 x = Execute Permission
+   -> allows you to run the file 
+   -> must be paired with the write permission to allow the changing of directories
+   
+ // how to view current Permissions //
+ 
+ using the command ls -l will show you a list of the files and on the left hand side it will show the permissions
+ 
+ 
+ // what's a sticky bit //
+ 
+ this is a special permission that can be assigned to a file or directory 
+ this file can only be deleted by the owner or root if the sticky bit is enabled 
+ we can see a that a sticky bit is active when a T is at the end of the file permission
+ 
+ // how do i change a file or directories permissions //
+ 
+ we can use the chmod command 
+      // Option 1: With Letters //
+      when using letters your command needs to contain the target, the operations and the permission
+      
+          // target list //
+           -> u : Owner
+           -> g : Group
+           -> o : Other 
+           -> a : All
+          // Operations //
+           -> + : add the permission
+           -> - : removes the permission
+          // example //
+          -> chmod [target][operator][permission][filename]
+          // setting the sticky bit //
+          -> it can be added using +t
+          -> removed using -t
+        
+      // Option 2: With Numbers //
+      
+         // permission numbers //
+         -> 4 = Read 
+         -> 2 = Write 
+         -> 1 = Execute
+         // Number Structure//
+         the numbers need to be placed in the order of owner, group and others.
+         the permission numbers can be added like 7 means read,write and execute so i permission of 777
+         gives all users and groups the read,write and execute permission.
+         // example //
+         chmod [owner][group][others][filename]
+         chmod 744 [filename]
+         // setting the sticky bit //
+          -> it can be added by adding a 1 infront of the user permissions
+          -> removed by adding a 0 before the permission 
+          
+   
+// How to change the owner of the file or directory //
+
+using the command chown [new Owner][filename]
+
+// How to change the group owner of a file //
+
+using the command chgrp [new group][filename]
+         
+         
+         
+  
