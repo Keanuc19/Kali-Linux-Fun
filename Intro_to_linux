@@ -1,0 +1,46 @@
+Intro To Linux File Structure 
+Creator : Keanu Chetty
+Title : Intro To Linux
+Languages : N/A
+Software : Kali Linux
+
+
+
+// Notes // 
+
+/bin 
+  contains executable files necessary to manage and run the system 
+/boot
+  This directory contains the bootloader files 
+/dev 
+  this contains special files that are used to represent the various hardware devices installed on the system
+/etc 
+  contains text-based config files used by the system
+  these files can be edited to change how Linux behaves 
+  contains critical startup and config files
+  the passwd file is located here ( /etc/passwd)
+/home 
+  this directory contains all the sub-directories that serve as home directories for each user account on the system
+/lib
+  contains code libraries used by programs in /bin and /sbin
+  the kernal module is stored in one of the subdirectories 
+/media 
+  this is used to mount external devices like CD drives 
+/mnt
+  this is used to mount external devices like CD drives 
+/opt 
+  contains files for some of the programs you install onto the system
+/root
+  this is the root users home directory
+/sbin 
+  contains important system management and administration files 
+/srv 
+  contains sub-directories where services running on the system save their files
+/sys
+  information on the systems hardware
+/tmp
+  contains temporary files creted by the user or by the system
+/usr
+  contains application files
+/var
+  contains a variety of variable data, including system log files 
