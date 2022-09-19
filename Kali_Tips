@@ -1,0 +1,11 @@
+Creator : Keanu Chetty
+Title : Kali Tips and Tricks
+Languages : N/A
+Software : Kali Linux 
+
+/// Tips ///
+
+"sudo"
+  allows almost root access if in the sudoer group
+"su"
+  allows you to change user in the terminal
